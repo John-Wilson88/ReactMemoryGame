@@ -171,15 +171,17 @@ constructor(props){
 				<h1> Dice Memory Game </h1>
 
 				<div className="row">
-					<div className="col-md-8">
+					<div className="col-md-6">
 
-						{this.memories.map(image => (
+						{this.memories.slice(0, 12).map(image => (
+
 							<Card 
 								key={image.id} 
 								id={image.id}
 								img={image.img}
 								click={this.click}
 							/> 
+
 						))}
 					</div>
 		
